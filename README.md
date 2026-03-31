@@ -1,103 +1,198 @@
-# Stellar Payment dApp (White Belt) 🚀
+#Stellar Payment dApp (White Belt) 🚀
 
-A modern, beginner-friendly decentralized application (dApp) built on the Stellar Testnet. This application allows users to connect their Freighter wallet, view their XLM balance, and send XLM to other Stellar addresses seamlessly.
+A modern, beginner-friendly decentralized application (dApp) built on the Stellar Testnet. This application allows users to connect their Freighter wallet, view their XLM balance, and send XLM transactions seamlessly.
 
-![Stellar dApp Screenshot Placeholder](https://via.placeholder.com/800x400.png?text=Stellar+Payment+dApp+Screenshot)
+This project demonstrates the core fundamentals of Stellar development including wallet integration, balance fetching, and transaction execution.
 
-## 🌟 Features
+⸻
 
-- **Freighter Wallet Integration**: Connect and disconnect your Freighter wallet securely.
-- **Real-time Balance**: Check your current XLM balance on the Stellar Testnet.
-- **Send Payments**: Send XLM to any other Stellar address easily with network fee estimation.
-- **Transaction Feedback**: View transaction status (Success/Error) alongside the transaction hash and a link to Stellar Expert Explorer.
-- **Copy to Clipboard**: Quickly copy your address with a clean visual feedback element.
+📌 Project Description
 
-## 🛠️ Tech Stack
+This dApp is a Simple Payment Application built as part of the Stellar White Belt level.
 
-- **Frontend Framework**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Blockchain SDK**: 
-  - `@stellar/stellar-sdk`
-  - `@stellar/freighter-api`
-- **Icons**: `lucide-react`
-- **Network**: Stellar Testnet
+It enables users to:
+	•	Connect/disconnect their Freighter wallet
+	•	View real-time XLM balance
+	•	Send XLM to any Stellar address on testnet
+	•	Get instant feedback on transaction status
 
-## 📁 Project Structure
+The project focuses on:
+	•	Clean UI/UX
+	•	Proper error handling
+	•	Real blockchain interaction using Stellar SDK
 
-```text
+⸻
+
+🌟 Features
+	•	🔗 Freighter Wallet Integration
+	•	Connect and disconnect wallet securely
+	•	Displays public key
+	•	💰 Real-time Balance
+	•	Fetch XLM balance from Stellar Horizon Testnet
+	•	Shows loading and error states
+	•	💸 Send Payments
+	•	Send XLM to any valid Stellar address
+	•	Includes input validation
+	•	📊 Transaction Feedback
+	•	Success/Error messages
+	•	Transaction hash display
+	•	Link to Stellar Expert Explorer
+	•	📋 Copy to Clipboard
+	•	Copy wallet address easily
+
+⸻
+
+🛠️ Tech Stack
+	•	Frontend: React + Vite
+	•	Styling: Tailwind CSS v4
+	•	Blockchain SDK:
+	•	@stellar/stellar-sdk
+	•	@stellar/freighter-api
+	•	Icons: lucide-react
+	•	Network: Stellar Testnet
+
+⸻
+
+📁 Project Structure
+
 src/
-├── components/          # Reusable UI components
-│   ├── ui/              # Base UI elements (Button, Input, Card)
-│   ├── WalletCard.jsx     # Displays wallet balance and public key
-│   └── TransactionForm.jsx # Handles sending XLM payments
-├── utils/               # Helper utilities
-│   ├── stellar.js       # Stellar SDK and Freighter API logic
-│   └── cn.js            # Tailwind class-merging utility
+├── components/
+│   ├── ui/
+│   ├── WalletCard.jsx
+│   └── TransactionForm.jsx
+├── utils/
+│   ├── stellar.js
+│   └── cn.js
 ├── pages/
-│   └── Home.jsx         # Main page layout
-├── App.jsx              # App entry point
-├── main.jsx             # React DOM rendering
-└── index.css            # Global styles and Tailwind configuration
-```
+│   └── Home.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
 
-## ⚙️ How Transactions Work
 
-1. **Connect Wallet**: The app uses the Freighter API to securely request your public key.
-2. **Fetch Balance**: We connect to the public **Horizon Testnet Server** (`https://horizon-testnet.stellar.org`) and query the account data for your address.
-3. **Build Transaction**: When you initiate a payment, we use `TransactionBuilder` to create a new transaction with an operation of type `payment`.
-4. **Sign Transaction**: We pass the un-signed transaction XDR back to Freighter which prompts you to sign it.
-5. **Submit to Network**: Once signed, we submit the transaction through the Horizon server and wait for the response, displaying the transaction hash upon success.
+⸻
 
----
+⚙️ How Transactions Work
+	1.	Connect Wallet
+	•	Uses Freighter API to get public key
+	2.	Fetch Balance
+	•	Queries Horizon Testnet server:
 
-## 🚀 Setup Instructions
+https://horizon-testnet.stellar.org
 
-### 1. Prerequisites
 
-- Node.js installed (v18 or higher recommended)
-- [Freighter Wallet Extension](https://freighter.app/) installed in your browser.
-- Make sure Freighter is configured to use the **Testnet**.
-- Important: Your Freighter wallet on testnet must be funded. You can fund it using the [Stellar Laboratory Friendbot](https://laboratory.stellar.org/#account-creator?network=test).
+	3.	Build Transaction
+	•	Uses TransactionBuilder
+	•	Adds payment operation
+	4.	Sign Transaction
+	•	Freighter prompts user to sign
+	5.	Submit Transaction
+	•	Sent to Stellar network
+	•	Returns transaction hash
 
-### 2. Local Installation
+⸻
 
-Clone the repository and install the dependencies:
+🚀 Setup Instructions (Run Locally)
 
-```bash
+1. Prerequisites
+	•	Node.js (v18 or higher)
+	•	Freighter Wallet Extension installed
+	•	Set Freighter to Testnet
+	•	Fund your wallet using:
+👉 https://laboratory.stellar.org/#account-creator?network=test
+
+⸻
+
+2. Installation
+
+# Clone repository
+git clone <your-repo-url>
+
+# Navigate to project
+cd stellar-payment-dapp
+
 # Install dependencies
 npm install
 
-# Start the development server
+# Start development server
 npm run dev
-```
 
-Open `http://localhost:5173` in your browser.
+Open in browser:
 
----
+http://localhost:5173
 
-## 🌐 Deployment Guide (Vercel or Netlify)
 
-This project uses Vite, making deployment extremely easy. 
+⸻
 
-### Option A: Deploying to Vercel (Recommended)
+📸 Screenshots 
 
-1. Sign up for a free account on [Vercel](https://vercel.com/).
-2. Install the Vercel CLI (`npm i -g vercel`) and run `vercel` in your project root, OR use the Vercel Dashboard to import your GitHub repository.
-3. The default settings for Vite will be automatically detected:
-   - **Framework Preset**: Vite
-   - **Build Command**: `pm run build`
-   - **Output Directory**: `dist`
-4. Click **Deploy**. Your app will be live within seconds!
+🔌 Wallet Connected State
 
-### Option B: Deploying to Netlify
+<img width="1435" height="804" alt="Screenshot 2026-03-31 at 10 32 24 PM" src="https://github.com/user-attachments/assets/2f0d1b83-f3cf-4c35-be07-438586e683d3" />
 
-1. Sign in to [Netlify](https://www.netlify.com/).
-2. Add a new site and click **Import an existing project** from GitHub.
-3. Configure the build settings:
-   - **Build command**: `npm run build`
-   - **Publish directory**: `dist`
-4. Click **Deploy site**.
 
-## 🤝 Need Help?
-- **Stellar Docs**: [Stellar Developer Documentation](https://developers.stellar.org/)
-- **Freighter Docs**: [Freighter Connect Documentation](https://docs.freighter.app/)
+⸻
+
+💰 Balance Displayed
+
+<img width="1417" height="774" alt="Screenshot 2026-03-31 at 10 32 53 PM" src="https://github.com/user-attachments/assets/2ba0ec4a-da9e-4909-a34b-c9fa141a51fa" />
+
+
+
+⸻
+
+🌐 Deployment Guide
+
+Option A: Vercel (Recommended)
+	1.	Go to https://vercel.com
+	2.	Import GitHub repository
+	3.	Use default settings:
+
+	•	Framework: Vite
+	•	Build Command:
+
+npm run build
+
+
+	•	Output Directory:
+
+dist
+
+
+
+	4.	Click Deploy
+
+⸻
+
+Option B: Netlify
+	1.	Go to https://netlify.com
+	2.	Import project from GitHub
+
+Build settings:
+
+Build command: npm run build
+Publish directory: dist
+
+	3.	Click Deploy
+
+⸻
+
+⚠️ Error Handling
+
+The app handles:
+	•	Freighter not installed
+	•	Wallet not connected
+	•	Invalid address
+	•	Insufficient balance
+	•	Network errors
+
+⸻
+
+🤝 Need Help?
+	•	Stellar Docs: https://developers.stellar.org
+	•	Freighter Docs: https://docs.freighter.app
+
+⸻
+
+
+
