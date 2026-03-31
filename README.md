@@ -143,46 +143,5 @@ npm run dev
 
 ⸻
 
-# 🌐 Deployment Guide
-
-Option A: Vercel (Recommended)
-	1.	Go to https://vercel.com
-	2.	Import GitHub repository
-	3.	Use default settings:
-
-	•	Framework: Vite
-	•	Build Command:
-
-npm run build
-
-
-	•	Output Directory:
-
-dist
-
-
-
-	4.	Click Deploy
-
-⸻
-
-
-⚠️ Error Handling
-
-The app handles:
-	•	Freighter not installed
-	•	Wallet not connected
-	•	Invalid address
-	•	Insufficient balance
-	•	Network errors
-
-⸻
-
-🤝 Need Help?
-	•	Stellar Docs: https://developers.stellar.org
-	•	Freighter Docs: https://docs.freighter.app
-
-⸻
-
 
 
