@@ -55,6 +55,25 @@ The project focuses on:
 
 📁 Project Structure
 
+<pre>
+```bash
+src/
+├── components/
+│   ├── ui/
+│   ├── WalletCard.jsx
+│   └── TransactionForm.jsx
+├── utils/
+│   ├── stellar.js
+│   └── cn.js
+├── pages/
+│   └── Home.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+</pre>
+
+
 
 src/
 ├── components/
