@@ -1,4 +1,4 @@
-#Stellar Payment dApp (White Belt) 🚀
+**Stellar Payment dApp (White Belt) 🚀**
 
 A modern, beginner-friendly decentralized application (dApp) built on the Stellar Testnet. This application allows users to connect their Freighter wallet, view their XLM balance, and send XLM transactions seamlessly.
 
@@ -6,7 +6,7 @@ This project demonstrates the core fundamentals of Stellar development including
 
 ⸻
 
-📌 Project Description
+**📌 Project Description**
 
 This dApp is a Simple Payment Application built as part of the Stellar White Belt level.
 
@@ -97,7 +97,7 @@ https://horizon-testnet.stellar.org
 
 ⸻
 
-🚀 Setup Instructions (Run Locally)
+**🚀 Setup Instructions (Run Locally)**
 
 1. Prerequisites
 	•	Node.js (v18 or higher)
@@ -122,14 +122,11 @@ npm install
 # Start development server
 npm run dev
 
-Open in browser:
-
-http://localhost:5173
 
 
 ⸻
 
-📸 Screenshots 
+**📸 Screenshots**
 
 🔌 Wallet Connected State
 
@@ -169,18 +166,6 @@ dist
 
 ⸻
 
-Option B: Netlify
-	1.	Go to https://netlify.com
-	2.	Import project from GitHub
-
-Build settings:
-
-Build command: npm run build
-Publish directory: dist
-
-	3.	Click Deploy
-
-⸻
 
 ⚠️ Error Handling
 
