@@ -1,4 +1,4 @@
-**Stellar Payment dApp (White Belt) 🚀**
+# Stellar Payment dApp (White Belt) 🚀
 
 A modern, beginner-friendly decentralized application (dApp) built on the Stellar Testnet. This application allows users to connect their Freighter wallet, view their XLM balance, and send XLM transactions seamlessly.
 
@@ -6,7 +6,7 @@ This project demonstrates the core fundamentals of Stellar development including
 
 ⸻
 
-**📌 Project Description**
+# 📌 Project Description
 
 This dApp is a Simple Payment Application built as part of the Stellar White Belt level.
 
@@ -110,23 +110,23 @@ https://horizon-testnet.stellar.org
 
 2. Installation
 
-# Clone repository
+## Clone repository
 git clone <your-repo-url>
 
-# Navigate to project
+## Navigate to project
 cd stellar-payment-dapp
 
-# Install dependencies
+## Install dependencies
 npm install
 
-# Start development server
+## Start development server
 npm run dev
 
 
 
 ⸻
 
-**📸 Screenshots**
+# 📸 Screenshots
 
 🔌 Wallet Connected State
 
@@ -143,7 +143,7 @@ npm run dev
 
 ⸻
 
-🌐 Deployment Guide
+# 🌐 Deployment Guide
 
 Option A: Vercel (Recommended)
 	1.	Go to https://vercel.com
